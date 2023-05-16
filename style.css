@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: NorseBold;
+    src: url(fonts/Norse-Bold.otf) format("opentype");
+}
+
 :root {
     font-family: sans-serif;
 }
@@ -18,6 +23,10 @@ h1 {
     font-size: clamp(1rem, 3vw, 2rem);
 }
 
+a {
+    color: inherit;
+}
+
 body {
     display: flex;
     min-height: 100vh;
@@ -28,6 +37,9 @@ body {
     display: flex;
     flex-direction: column;
     background-color: green;
+    background-image: url(images/background-image-daniel-j-schwarz-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
     position: relative;
 }
 
@@ -36,17 +48,21 @@ body {
     position: absolute;
     top: 25vh;
     width: 100%;
-    height: 12vh;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.logoContainer > img {
+    height: clamp(4rem, 10vw, 8rem);
+}
+
 .logoContainer > div {
     color: white;
     text-align: center;
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: bold;
+    font-family: NorseBold;
+    font-size: clamp(3rem, 7.5vw, 6rem);
 }
 
 .photoCredits {
