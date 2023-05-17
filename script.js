@@ -59,6 +59,12 @@ function validate(fieldID) {
     }
 }
 
+function showError(field) {
+    field.reportValidity();
+
+    field.nextElementSibling.textContent = field.validationMessage;
+}
+
 const firstName = document.getElementById('firstName');
 
 function validateFirstName() {
@@ -68,9 +74,7 @@ function validateFirstName() {
         firstName.setCustomValidity("");
     }
 
-    firstName.reportValidity();
-
-    firstName.nextElementSibling.textContent = firstName.validationMessage;
+    showError(firstName);
 }
 
 const lastName = document.getElementById('lastName');
@@ -82,9 +86,7 @@ function validateLastName() {
         lastName.setCustomValidity("");
     }
 
-    lastName.reportValidity();
-
-    lastName.nextElementSibling.textContent = lastName.validationMessage;
+    showError(lastName);
 }
 
 const email = document.getElementById('email');
@@ -98,9 +100,7 @@ function validateEmail() {
         email.setCustomValidity("");
     }
 
-    email.reportValidity();
-
-    email.nextElementSibling.textContent = email.validationMessage;
+    showError(email);
 }
 
 const phoneNumber = document.getElementById('phoneNumber');
@@ -112,9 +112,7 @@ function validatePhoneNumber() {
         phoneNumber.setCustomValidity("");
     }
 
-    phoneNumber.reportValidity();
-
-    phoneNumber.nextElementSibling.textContent = phoneNumber.validationMessage;
+    showError(phoneNumber);
 }
 
 const password = document.getElementById('password');
@@ -128,9 +126,7 @@ function validatePassword() {
         password.setCustomValidity("");
     }
 
-    password.reportValidity();
-
-    password.nextElementSibling.textContent = password.validationMessage;
+    showError(password);
 
     validateConfirmPassword();
 }
@@ -146,7 +142,5 @@ function validateConfirmPassword() {
         confirmPassword.setCustomValidity("");
     }
 
-    confirmPassword.reportValidity();
-
-    confirmPassword.nextElementSibling.textContent = confirmPassword.validationMessage;
+    showError(confirmPassword);
 }
