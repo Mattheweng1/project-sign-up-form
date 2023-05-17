@@ -109,10 +109,34 @@ body {
 
 label > div {
     font-size: clamp(0.6rem, 1vw, 1.5rem);
+    color: rgb(75, 75, 75);
+    font-weight: bold;
 }
 
 label > input {
     width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    transition: 0.75s;
+}
+
+label > input:focus {
+    outline: none;
+    border-color: blue;
+    box-shadow: 2px 2px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+label > input:invalid:focus {
+    border-color: red;
+}
+
+.error {
+    color: red;
+}
+
+.flashError {
+    background-color: rgba(255, 0, 0, 0.5);
+    transition: 0.1s;
 }
 
 .createAccount {
@@ -125,6 +149,15 @@ label > input {
     color: white;
     font-weight: bold;
     box-shadow: 2px 2px 15px -5px black;
+}
+
+.createAccount:hover {
+    cursor: pointer;
+    background-color: forestgreen;
+}
+
+.createAccount:active {
+    background-color: greenyellow;
 }
 
 .logInLink {

@@ -30,35 +30,41 @@
             <div class="formRow">
                 <label for="firstName">
                     <div>FIRST NAME</div>
-                    <input type="text" id="firstName" name="firstName">
+                    <input type="text" id="firstName" name="firstName" required>
+                    <div class="error" aria-live="polite"></div>
                 </label>
                 <label for="lastName">
                     <div>LAST NAME</div>
-                    <input type="text" id="lastName" name="lastName">
+                    <input type="text" id="lastName" name="lastName" required>
+                    <div class="error" aria-live="polite"></div>
                 </label>
             </div>
             <div class="formRow">
                 <label for="email">
                     <div>EMAIL</div>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required>
+                    <div class="error" aria-live="polite"></div>
                 </label>
                 <label for="phoneNumber">
                     <div>PHONE NUMBER</div>
-                    <input type="tel" id="phoneNumber" name="phoneNumber">
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    <div class="error" aria-live="polite"></div>
                 </label>
             </div>
             <div class="formRow">
                 <label for="password">
                     <div>PASSWORD</div>
-                    <input type="password" id="password" name="password">
+                    <input type="password" id="password" name="password" required minlength="8">
+                    <div class="error" aria-live="polite"></div>
                 </label>
                 <label for="confirmPassword">
                     <div>CONFIRM PASSWORD</div>
-                    <input type="password" id="confirmPassword" name="confirmPassword">
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <div class="error" aria-live="polite"></div>
                 </label>
             </div>
         </div>
-        <button class="createAccount">Create Account</button>
+        <button type="submit" class="createAccount">Create Account</button>
         <div class="logInLink">Already have an account? <a href="">Log in</a></div>
     </form>
 </body>
