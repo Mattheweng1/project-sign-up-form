@@ -69,7 +69,7 @@ const firstName = document.getElementById('firstName');
 
 function validateFirstName() {
     if (firstName.validity.valueMissing) {
-        firstName.setCustomValidity("* You need to enter your first name.");
+        firstName.setCustomValidity("* Please fill out this field.");
     } else {
         firstName.setCustomValidity("");
     }
@@ -81,7 +81,7 @@ const lastName = document.getElementById('lastName');
 
 function validateLastName() {
     if (lastName.validity.valueMissing) {
-        lastName.setCustomValidity("* You need to enter your last name.");
+        lastName.setCustomValidity("* Please fill out this field.");
     } else {
         lastName.setCustomValidity("");
     }
@@ -93,7 +93,7 @@ const email = document.getElementById('email');
 
 function validateEmail() {
     if (email.validity.valueMissing) {
-        email.setCustomValidity("* You need to enter your email.");
+        email.setCustomValidity("* Please fill out this field.");
     } else if (email.validity.typeMismatch) {
         email.setCustomValidity("* What you entered is not a valid email.")
     } else {
@@ -107,7 +107,7 @@ const phoneNumber = document.getElementById('phoneNumber');
 
 function validatePhoneNumber() {
     if (phoneNumber.validity.valueMissing) {
-        phoneNumber.setCustomValidity("* You need to enter your phone number.");
+        phoneNumber.setCustomValidity("* Please fill out this field.");
     } else {
         phoneNumber.setCustomValidity("");
     }
@@ -119,7 +119,7 @@ const password = document.getElementById('password');
 
 function validatePassword() {
     if (password.validity.valueMissing) {
-        password.setCustomValidity("* You need to enter a password.");
+        password.setCustomValidity("* Please fill out this field.");
     } else if (password.validity.tooShort) {
         password.setCustomValidity(`* The password must be at least ${password.minLength} characters.`);
     } else {
@@ -135,7 +135,7 @@ const confirmPassword = document.getElementById('confirmPassword');
 
 function validateConfirmPassword() {
     if (confirmPassword.validity.valueMissing) {
-        confirmPassword.setCustomValidity("* You need to confirm your password.");
+        confirmPassword.setCustomValidity("* Please fill out this field.");
     } else if (confirmPassword.value !== password.value) {
         confirmPassword.setCustomValidity("* This needs to match your password.");
     } else {
